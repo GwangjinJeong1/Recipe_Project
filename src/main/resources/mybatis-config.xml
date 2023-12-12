@@ -4,6 +4,6 @@
         "https://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
     <typeAliases>
-        <typeAlias alias="board" type="com.example.BoardVO"/>
+        <typeAlias alias="recipe" type="com.example.RecipeVO"/>
     </typeAliases>
 </configuration>

@@ -13,7 +13,7 @@
     </delete>
     <update id="updateRecipe">
         update RECIPE
-        set recipe_name=#{recipe_name, writer=#{writer}, category=#{category}, recipe_level=#{recipe_level}, ingredient=#{ingredient}, recipe_content=#{recipe_content}, image=#{image}
+        set recipe_name=#{recipe_name}, writer=#{writer}, category=#{category}, recipe_level=#{recipe_level}, ingredient=#{ingredient}, recipe_content=#{recipe_content}, image=#{image}
         where seq=#{seq}
     </update>
     <select id="getRecipe" resultType="recipe">

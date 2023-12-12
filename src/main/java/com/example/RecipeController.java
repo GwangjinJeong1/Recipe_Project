@@ -9,14 +9,14 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
 @RequestMapping("/board")
-public class BoardController {
+public class RecipeController {
 
     @Autowired
-    BoardService boardService;
+    RecipeService recipeService;
 
     @RequestMapping(value="/posts", method=RequestMethod.GET)
     public String boardlist(Model model) {
-        model.addAttribute("posts", boardService.getBoardList());
+        model.addAttribute("posts", recipeService.getBoardList());
         return "posts";
     }
 
@@ -26,8 +26,8 @@ public class BoardController {
     }
 
     @RequestMapping(value="/addok", method=RequestMethod.POST)
-    public String addPostOK(BoardVO vo) {
-        if(boardService.insertBoard(vo) == 0)
+    public String addPostOK(RecipeVO vo) {
+        if(recipeService.insertBoard(vo) == 0)
             System.out.println("데이터 추가 실패");
         else
             System.out.println("데이터 추가 성공!!");
@@ -36,21 +36,21 @@ public class BoardController {
 
     @RequestMapping(value="view/{id}", method=RequestMethod.GET)
     public String viewPost(@PathVariable("id") int id, Model model) {
-        BoardVO boardVO = boardService.getBoard(id);
+        RecipeVO boardVO = recipeService.getBoard(id);
         model.addAttribute("boardVO", boardVO);
         return "view";
     }
 
     @RequestMapping(value="editform/{id}", method=RequestMethod.GET)
     public String editPost(@PathVariable("id") int id, Model model) {
-        BoardVO boardVO = boardService.getBoard(id);
+        RecipeVO boardVO = recipeService.getBoard(id);
         model.addAttribute("boardVO", boardVO);
         return "editform";
     }
 
     @RequestMapping(value="/editok", method=RequestMethod.POST)
-    public String editPostOK(BoardVO vo) {
-        if(boardService.updateBoard(vo) == 0)
+    public String editPostOK(RecipeVO vo) {
+        if(recipeService.updateBoard(vo) == 0)
             System.out.println("데이터 수정 실패");
         else
             System.out.println("데이터 수정 성공!!");
@@ -59,7 +59,7 @@ public class BoardController {
 
     @RequestMapping("/deleteok/{id}")
     public String deletePostOK(@PathVariable("id") int id) {
-        if(boardService.deleteBoard(id) == 0)
+        if(recipeService.deleteBoard(id) == 0)
             System.out.println("데이터 삭제 실패");
         else
             System.out.println("데이터 삭제 성공!!");

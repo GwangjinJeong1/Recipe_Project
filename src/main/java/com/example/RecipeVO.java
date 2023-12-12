@@ -2,7 +2,7 @@ package com.example;
 
 import java.util.Date;
 
-public class BoardVO {
+public class RecipeVO {
 	private int seq;
 	private String title;
 	private String writer;

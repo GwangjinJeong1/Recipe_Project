@@ -7,7 +7,7 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
-<%@ page import="com.example.BoardVO"%>
+<%@ page import="com.example.RecipeVO"%>
 <html>
 <head>
     <meta charset="UTF-8">

@@ -1,0 +1,53 @@
+@charset "UTF-8";
+.navbar {
+    margin-bottom: 50px;
+    border-radius: 0;
+  }
+  
+/* Remove the jumbotron's default bottom margin */ 
+.jumbotron {
+margin-bottom: 0;
+}
+
+/* Add a gray background color and some padding to the footer */
+footer {
+background-color: #f2f2f2;
+padding: 25px;
+}
+.logo {
+    margin-top: 0;
+    width: 35px;
+    height: 30px;
+}
+.navbar-brand{
+    background-color: #fff;
+
+}
+.my_recipe_top{
+    margin-bottom: 70px;
+}
+.delete_button{
+    float: right;
+}
+.edit_button{
+    float: right;
+    margin-right: 10px;
+}
+.panel{
+    height: 300px;
+}
+.panel-body img {
+    max-height: 100%;
+    width: auto;
+    height: 185px; /* Make the image fill the panel vertically */
+    object-fit: cover; /* Ensure the entire image is displayed */
+}
+.stars {
+    color: gold; /* Color of the stars */
+}
+.btn-primary{
+    margin-bottom: 100px;
+}
+.back_button{
+    float : left;
+}

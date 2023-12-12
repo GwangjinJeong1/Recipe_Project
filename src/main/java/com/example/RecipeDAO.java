@@ -11,15 +11,15 @@ public class RecipeDAO {
 	@Autowired
 	SqlSession sqlSession;
 
-	public int insertBoard(RecipeVO vo) { return sqlSession.insert("Board.insertBoard", vo); }
+	public int insertRecipe(RecipeVO vo) { return sqlSession.insert("Recipe.insertRecipe", vo); }
 
 	// 글 삭제
-	public int deleteBoard(int seq) { return sqlSession.delete("Board.deleteBoard", seq); }
+	public int deleteRecipe(int seq) { return sqlSession.delete("Recipe.deleteRecipe", seq); }
 
 	// 글 수정
-	public int updateBoard(RecipeVO vo) { return sqlSession.update("Board.updateBoard", vo); }
+	public int updateRecipe(RecipeVO vo) { return sqlSession.update("Recipe.updateRecipe", vo); }
 
-	public RecipeVO getBoard(int seq) { return sqlSession.selectOne("Board.getBoard", seq); }
+	public RecipeVO getRecipe(int seq) { return sqlSession.selectOne("Recipe.getRecipe", seq); }
 
-	public List<RecipeVO> getBoardList(){ return sqlSession.selectList("Board.getBoardList"); }
+	public List<RecipeVO> getRecipeList(){ return sqlSession.selectList("Recipe.getRecipeList"); }
 }

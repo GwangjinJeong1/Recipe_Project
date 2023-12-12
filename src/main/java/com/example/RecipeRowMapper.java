@@ -10,10 +10,13 @@ class RecipeRowMapper implements RowMapper<RecipeVO> {
     public RecipeVO mapRow(ResultSet rs, int rowNum) throws SQLException {
         RecipeVO vo = new RecipeVO();
         vo.setSeq(rs.getInt("seq"));
-        vo.setTitle(rs.getString("title"));
-        vo.setContent(rs.getString("content"));
+        vo.setRecipe_name(rs.getString("recipe_name"));
         vo.setWriter(rs.getString("writer"));
         vo.setCategory(rs.getString("category"));
+        vo.setRecipe_level(rs.getInt("recipe_level"));
+        vo.setIngredient(rs.getString("ingredient"));
+        vo.setRecipe_content(rs.getString("recipe_content"));
+        vo.setImage(rs.getString("image"));
         vo.setRegdate((rs.getDate("regdate")));
         return vo;
     }

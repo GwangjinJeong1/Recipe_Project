@@ -12,26 +12,26 @@ public class RecipeServiceImpl implements RecipeService {
     RecipeDAO recipeDAO;
 
     @Override
-    public int insertBoard(RecipeVO vo) {
-        return recipeDAO.insertBoard(vo);
+    public int insertRecipe(RecipeVO vo) {
+        return recipeDAO.insertRecipe(vo);
     }
 
     @Override
-    public int deleteBoard(int seq) {
-        return recipeDAO.deleteBoard(seq);
+    public int deleteRecipe(int seq) {
+        return recipeDAO.deleteRecipe(seq);
     }
 
     @Override
-    public int updateBoard(RecipeVO vo) {
-        return recipeDAO.updateBoard(vo);
+    public int updateRecipe(RecipeVO vo) {
+        return recipeDAO.updateRecipe(vo);
     }
 
     @Override
-    public RecipeVO getBoard(int seq) { return recipeDAO.getBoard(seq); }
+    public RecipeVO getRecipe(int seq) { return recipeDAO.getRecipe(seq); }
 
     @Override
-    public List<RecipeVO> getBoardList() {
-        return recipeDAO.getBoardList();
+    public List<RecipeVO> getRecipeList() {
+        return recipeDAO.getRecipeList();
     }
 
 }

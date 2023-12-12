@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Recipe Sharing Platform</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href ="./my.css">
+    <script>
+        function addRecipe() {
+            const recipeName = document.getElementById("recipeName").value;
+            const recipeType = document.getElementById("recipeType").value;
+            const difficulty = document.getElementById("difficulty").value;
+            const recipeImage = document.querySelector(".real-upload").value;
+            const recipeIngredients = document.getElementById("recipeIngredients").value;
+            const recipeInstructions = document.getElementById("recipeInstructions").value;
+        
+            if (recipeName === "") {
+                alert("레시피 이름을 적어주세요.");
+                return;
+            }
+            if (recipeType === "") {
+                alert("레시피 종류를 적어주세요.");
+                return;
+            }
+            if (difficulty === "") {
+                alert("난이도를 골라주세요.");
+                return;
+            }
+            if (recipeImage === "") {
+                alert("이미지를 선택해주세요.");
+                return;
+            }
+            if (recipeIngredients === "") {
+                alert("재료를 적어주세요.");
+                return;
+            }
+            if (recipeInstructions === "") {
+                alert("조리법을 적어주세요.");
+                return;
+            }
+
+            alert("게시물이 추가됩니다.");
+            window.location.href = "index.html";
+        }
+      function backpage(){
+        window.location.href = "index.html";
+      }
+    </script>
+        
+</head>
+<body>
+    <div class="jumbotron">
+        <div class="container text-center">
+          <h1>Cooking Recipe</h1>
+          <p>Share and Discover Delicious Recipes</p>
+        </div>
+      </div>
+      
+      <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>                        
+            </button>
+            <a class="navbar-brand" href="img/LOGO.png"><img src="img/LOGO.png" class="logo" alt="Logo"></a>
+          </div>
+          <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+              <li><a href="Home.html">Home</a></li>
+              <li><a href="#">Recipes</a></li>
+              <li><a href="#">Categories</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li class="active"><a href="index.html"><span class="glyphicon glyphicon-user"></span> My Recipes</a></li>
+              <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    <div class="container">
+    <h2>Add Recipe</h2>
+    <form name="form1" method="post" action="form_ok.php">
+        <div class="form-group">
+        <label for="recipeName">Recipe Name:</label>
+        <input type="text" class="form-control" id="recipeName" placeholder="Enter recipe name">
+        </div>
+        <div class="form-group">
+        <label for="recipeType">Recipe Type:</label>
+        <input type="text" class="form-control" id="recipeType" placeholder="Enter recipe type">
+        </div>
+        <div class="form-group">
+          <label for="recipeDifficulty">Difficulty:</label>
+          <select name="Difficulty" id="difficulty">
+            <option value="level1">난이도 1</option>
+            <option value="level2">난이도 2</option>
+            <option value="level3">난이도 3</option>
+            <option value="level4">난이도 4</option>
+            <option value="level5">난이도 5</option>
+          </select>
+        </div>
+        <div class="form-group">
+        <label for="recipeImage">Recipe Image URL:</label>
+        <input type="file" class="real-upload" accept="image/*" required multiple>
+        </div>
+        <div class="form-group">
+        <label for="recipeIngredients">Ingredients:</label>
+        <textarea class="form-control" id="recipeIngredients" placeholder="Enter ingredients" rows="4"></textarea>
+        </div>
+        <div class="form-group">
+        <label for="recipeInstructions">Instructions:</label>
+        <textarea class="form-control" id="recipeInstructions" placeholder="Enter instructions" rows="4"></textarea>
+        </div>
+        <button type="button" class="btn btn-primary" onclick="addRecipe()">Add</button>
+        <button type="button" class="btn btn-primary" onclick="backpage()">Back</button>
+    </form>
+    </div>
+</body>
+</html>

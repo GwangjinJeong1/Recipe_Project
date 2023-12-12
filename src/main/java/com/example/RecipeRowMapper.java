@@ -5,10 +5,10 @@ import org.springframework.jdbc.core.RowMapper;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-class BoardRowMapper implements RowMapper<BoardVO> {
+class RecipeRowMapper implements RowMapper<RecipeVO> {
     @Override
-    public BoardVO mapRow(ResultSet rs, int rowNum) throws SQLException {
-        BoardVO vo = new BoardVO();
+    public RecipeVO mapRow(ResultSet rs, int rowNum) throws SQLException {
+        RecipeVO vo = new RecipeVO();
         vo.setSeq(rs.getInt("seq"));
         vo.setTitle(rs.getString("title"));
         vo.setContent(rs.getString("content"));

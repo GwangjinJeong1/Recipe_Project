@@ -1,7 +1,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8" isELIgnored="false"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@page import="com.example.RecipeController ,java.util.*"%>
 <!DOCTYPE html>
 <html lang="en">
@@ -54,7 +53,7 @@
         <img src="../img/list.png" width="50" height="50" style="float: left; margin-right: 10px;">
         <h2 style="float: left; margin-top: 10px;">      My Recipe list</h2>
         <button style="float: right;">
-            <a href="add.html">
+            <a href="add">
                 Add
             </a>
         </button>

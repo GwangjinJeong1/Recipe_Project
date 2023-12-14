@@ -6,7 +6,7 @@
     <insert id="insertRecipe">
         insert into RECIPE (recipe_name, writer, category, recipe_level, ingredient, recipe_content, image)
         values
-        (${recipe_name}, ${writer}, ${category}, ${recipe_level}, ${ingredient}, ${recipe_content}, ${image})
+        ("${recipe_name}", "${writer}", "${category}", ${recipe_level}, "${ingredient}", "${recipe_content}", "${image}")
     </insert>
     <delete id="deleteRecipe">
         delete from RECIPE where seq=#{seq}

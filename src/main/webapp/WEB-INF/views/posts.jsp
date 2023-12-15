@@ -61,16 +61,18 @@
     <div class="row">
         <c:forEach items="${recipes}" var="recipe">
             <div class="col-sm-4">
-                <div class="panel panel-primary">
-                    <div class="panel-heading">
+                <a href="view/${recipe.seq}">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
                             ${recipe.category} / ${recipe.recipe_name}
-                        <c:forEach begin="1" end="${recipe.recipe_level}" var="star">
-                            <span class="stars">&#9733;</span>
-                        </c:forEach>
+                            <c:forEach begin="1" end="${recipe.recipe_level}" var="star">
+                                <span class="stars">&#9733;</span>
+                            </c:forEach>
+                        </div>
+                        <div class="panel-body">${recipe.image}</div>
+                        <div class="panel-footer">작성일자: ${recipe.regdate}</div>
                     </div>
-                    <div class="panel-body">${recipe.image}</div>
-                    <div class="panel-footer">작성일자: ${recipe.regdate}</div>
-                </div>
+                </a>
             </div>
         </c:forEach>
     </div>

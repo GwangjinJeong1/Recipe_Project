@@ -41,14 +41,14 @@
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
-                <li><a href="Home.html">Home</a></li>
+                <li><a href="#">Home</a></li>
                 <li><a href="#">Recipes</a></li>
                 <li><a href="#">Categories</a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li class="active"><a href="./index.html"><span class="glyphicon glyphicon-user"></span> My Recipes</a></li>
+                <li class="active"><a href="#"><span class="glyphicon glyphicon-user"></span> My Recipes</a></li>
                 <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
             </ul>
         </div>

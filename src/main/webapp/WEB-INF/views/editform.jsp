@@ -1,13 +1,8 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: jeong-gwangjin
-  Date: 12/1/23
-  Time: 11:38 PM
-  To change this template use File | Settings | File Templates.
---%>
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" isELIgnored="false" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<!DOCTYPE html>
 <html>
 <head>
     <title>레시피 수정 페이지</title>
@@ -38,14 +33,14 @@
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
-                <li><a href="home.jsp">Home</a></li>
+                <li><a href="#">Home</a></li>
                 <li><a href="#">Recipes</a></li>
                 <li><a href="#">Categories</a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li class="active"><a href="./index.html"><span class="glyphicon glyphicon-user"></span> My Recipes</a></li>
+                <li class="active"><a href="#"><span class="glyphicon glyphicon-user"></span> My Recipes</a></li>
                 <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
             </ul>
         </div>

@@ -31,14 +31,14 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li><a href="home.jsp">Home</a></li>
+        <li><a href="#">Home</a></li>
         <li><a href="#">Recipes</a></li>
         <li><a href="#">Categories</a></li>
         <li><a href="#">About</a></li>
         <li><a href="#">Contact</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li class="active"><a href="./index.html"><span class="glyphicon glyphicon-user"></span> My Recipes</a></li>
+        <li class="active"><a href="#"><span class="glyphicon glyphicon-user"></span> My Recipes</a></li>
         <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
       </ul>
     </div>
@@ -47,7 +47,7 @@
 
 <div class="container">
   <h2>Add Recipe</h2>
-  <form name="form1" method="post" action="addok">
+  <form name="form1" method="post" action="addok" enctype="multipart/form-data">
     <div class="form-group">
       <label for="recipeName">Recipe Name:</label>
       <input type="text" class="form-control" id="recipeName" name="recipe_name" placeholder="Enter recipe name">
@@ -72,7 +72,7 @@
     </div>
     <div class="form-group">
       <label for="recipeImage">Recipe Image URL:</label>
-      <input type="file" class="real-upload" id="recipeImage" name="image" accept="image/**" multiple>
+      <input type="file" class="real-upload" id="recipeImage" name="image" accept="image/*" multiple>
     </div>
     <div class="form-group">
       <label for="recipeIngredients">Ingredients:</label>

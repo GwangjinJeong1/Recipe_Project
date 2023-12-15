@@ -69,7 +69,7 @@
                                 <span class="stars">&#9733;</span>
                             </c:forEach>
                         </div>
-                        <div class="panel-body">${recipe.image}</div>
+                        <div class="panel-body"><img src="../img/${recipe.image}"></div>
                         <div class="panel-footer">작성일자: ${recipe.regdate}</div>
                     </div>
                 </a>

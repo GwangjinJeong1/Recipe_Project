@@ -17,7 +17,7 @@
     <script>
         function delete_ok(id){
             var a = confirm("정말로 삭제하겠습니까?");
-            if(a) location.href= "deleteok/"+id;
+            if(a) location.href= "../deleteok/"+id;
         }
     </script>
 </head>
@@ -59,7 +59,7 @@
 <div class="container">
     <div class="recipe-details">
         <button class="delete_button"><a href="javascript:delete_ok('${recipeVO.seq}')">Delete</a></button>
-        <button class="edit_button" ><a href="edit.html">Edit</a></button>
+        <button class="edit_button" ><a href="../editform/${recipeVO.seq}">Edit</a></button>
         <button class="back_button" onclick="history.back()">Back</button>
         <h2>
             ${recipeVO.category} / ${recipeVO.recipe_name}

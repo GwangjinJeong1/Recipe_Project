@@ -47,7 +47,7 @@
 
 <div class="container">
   <h2>Add Recipe</h2>
-  <form name="form1" method="post" action="addok">
+  <form name="form1" method="post" action="addok" enctype="multipart/form-data">
     <div class="form-group">
       <label for="recipeName">Recipe Name:</label>
       <input type="text" class="form-control" id="recipeName" name="recipe_name" placeholder="Enter recipe name">
@@ -82,7 +82,7 @@
       <label for="recipeContent">How to:</label>
       <textarea class="form-control" id="recipeContent" name="recipe_content" placeholder="Enter instructions" rows="4"></textarea>
     </div>
-    <button type="submit" class="btn btn-primary">Add</button>
+    <input type="submit" value="Add" class="btn btn-primary"/>
     <button type="button" class="btn btn-primary" onclick="location.href='posts'">Back</button>
   </form>
 </div>

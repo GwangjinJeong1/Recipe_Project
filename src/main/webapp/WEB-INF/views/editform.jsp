@@ -54,6 +54,7 @@
 
 <div class="container">
     <h2>Edit Recipe</h2>
+    <%--@elvariable id="recipeVO" type=""--%>
     <form:form modelAttribute="recipeVO" method="POST" action="../editok">
         <form:hidden path="seq"/>
         <div class="form-group">

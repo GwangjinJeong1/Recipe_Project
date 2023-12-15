@@ -54,6 +54,7 @@
 
 <div class="container">
     <h2>Edit Recipe</h2>
+    <%--@elvariable id="recipeVO" type=""--%>
     <form:form modelAttribute="recipeVO" method="POST" action="../editok">
         <form:hidden path="seq"/>
         <div class="form-group">
@@ -70,7 +71,7 @@
         </div>
         <div class="form-group">
             <label for="recipeLevel">Recipe Level:</label>
-            <form:select id="recipeLevel" path="recipe_level" itemValue="${recipeVO.recipe_level}">
+            <form:select id="recipeLevel" path="recipe_level">
                 <option value="1">Level 1</option>
                 <option value="2">Level 2</option>
                 <option value="3">Level 3</option>
@@ -99,17 +100,9 @@
         <button type="button" class="btn btn-primary" onclick="history.back()">Cancel</button>
     </form:form>
 </div>
-
-<%--<h1>게시글 수정</h1>--%>
-<%--<form:form modelAttribute="boardVO" method="POST" action="../editok">--%>
-<%--    <form:hidden path="seq"/>--%>
-<%--    <table id="edit">--%>
-<%--        <tr><td>Category: </td><td><form:input path="category"/></td></tr>--%>
-<%--        <tr><td>Title: </td><td><form:input path="title"/></td></tr>--%>
-<%--        <tr><td>Writer: </td><td><form:input path="writer"/></td></tr>--%>
-<%--        <tr><td>Contents: </td><td><form:textarea cols="50" rows="5" path="content"/></td></tr>--%>
-<%--    </table>--%>
-<%--    <button type="button" onclick="history.back()">Cancel</button><button type="submit">Edit</button>--%>
-<%--</form:form>--%>
 </body>
+
+<script>
+    document.getElementById("recipeLevel").selectedIndex = ${recipeVO.recipe_level} - 1;
+</script>
 </html>

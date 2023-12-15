@@ -1,4 +1,3 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8" isELIgnored="false"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
@@ -59,7 +58,7 @@
 <div class="container">
     <div class="recipe-details">
         <button class="delete_button"><a href="javascript:delete_ok('${recipeVO.seq}')">Delete</a></button>
-        <button class="edit_button" ><a href="edit.html">Edit</a></button>
+        <button class="edit_button" ><a href="../editform/${recipeVO.seq}">Edit</a></button>
         <button class="back_button" onclick="history.back()">Back</button>
         <h2>
             ${recipeVO.category} / ${recipeVO.recipe_name}

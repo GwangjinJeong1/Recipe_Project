@@ -15,7 +15,7 @@ public class RecipeController {
     RecipeService recipeService;
 
     @RequestMapping(value="/posts", method=RequestMethod.GET)
-    public String recipelist(Model model) {
+    public String recipeList(Model model) {
         model.addAttribute("recipes", recipeService.getRecipeList());
         return "posts";
     }
@@ -36,15 +36,14 @@ public class RecipeController {
 
     @RequestMapping(value="view/{id}", method=RequestMethod.GET)
     public String viewPost(@PathVariable("id") int id, Model model) {
-        RecipeVO recipeVO = recipeService.getRecipe(id);
-        model.addAttribute("recipeVO", recipeVO);
+        model.addAttribute("recipeVO", recipeService.getRecipe(id));
         return "view";
     }
 
     @RequestMapping(value="editform/{id}", method=RequestMethod.GET)
     public String editPost(@PathVariable("id") int id, Model model) {
-        RecipeVO recipeVO = recipeService.getRecipe(id);
-        model.addAttribute("recipeVO", recipeVO);
+        model.addAttribute("recipeVO", recipeService.getRecipe(id));
+        System.out.println("Model attributies: " + model.asMap());
         return "editform";
     }
 

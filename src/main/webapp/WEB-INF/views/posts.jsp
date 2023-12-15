@@ -69,7 +69,7 @@
                                 <span class="stars">&#9733;</span>
                             </c:forEach>
                         </div>
-                        <div class="panel-body"><img src="${recipe.image}" alt="Recipe Image"></div>
+                        <div class="panel-body"><img src="${pageContext.request.contextPath}/img/${recipe.image}" alt="Recipe Image"></div>
                         <div class="panel-footer">작성일자: ${recipe.regdate}</div>
                     </div>
                 </a>

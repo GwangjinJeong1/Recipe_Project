@@ -72,7 +72,7 @@
     </div>
     <div class="form-group">
       <label for="recipeImage">Recipe Image URL:</label>
-      <input type="file" class="real-upload" id="recipeImage" name="image" accept="image/*" multiple>
+      <input type="file" class="real-upload" id="recipeImage" name="image" accept="image/**" multiple>
     </div>
     <div class="form-group">
       <label for="recipeIngredients">Ingredients:</label>

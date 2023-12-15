@@ -84,7 +84,7 @@
             <form:input type="file" class="real-upload" id="recipeImage" path="image" accept="image/*"/>
             <div>
                 <c:if test="${recipeVO.image ne ''}">
-                    <img src="${recipeVO.image}" class="photo" width="100" height="100"/>
+                    <img src="${pageContext.request.contextPath}/img/${recipeVO.image}" class="photo" width="100" height="100"/>
                 </c:if>
             </div>
         </div>

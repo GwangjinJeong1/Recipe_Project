@@ -16,7 +16,7 @@
     <script>
         function delete_ok(id){
             var a = confirm("정말로 삭제하겠습니까?");
-            if(a) location.href= "deleteok/"+id;
+            if(a) location.href= "../deleteok/"+id;
         }
     </script>
 </head>
@@ -66,7 +66,7 @@
                 <span class="stars">&#9733;</span>
             </c:forEach>
         </h2>
-        <p>image: ${recipeVO.image}</p>
+        <img src="${pageContext.request.contextPath}/img/${recipeVO.image}" class="photo" width="200" height="200"/>
         <p>Ingredients:</p>
         <ul>
             <li>${recipeVO.ingredient}</li>

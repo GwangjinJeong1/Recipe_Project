@@ -43,7 +43,6 @@ public class RecipeController {
     @RequestMapping(value="editform/{id}", method=RequestMethod.GET)
     public String editPost(@PathVariable("id") int id, Model model) {
         model.addAttribute("recipeVO", recipeService.getRecipe(id));
-        System.out.println("Model attributies: " + model.asMap());
         return "editform";
     }
 
